@@ -156,3 +156,14 @@
   text-align: center;
   color: #a4a4a4;
 }
+
+.github-repo-link {
+  display: inline-block;
+  font-family: "Gantari", sans-serif;
+  font-size: 15px;
+  color: #a4a4a4;
+}
+
+.page-footer {
+  text-align: center;
+}
