@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <form class="locationSearchForm">
+          <span class="locationSearchForm__field"
+            ><input
+              class="locationSearchForm__searchbar"
+              type="text"
+              placeholder="Enter a location..."
+              id="cityInput"
+            />
+            <button class="locationSearchForm__searchButton">🔍</button>
+          </span>
+        </form>
+        <button id="my-current-location">📍</button>
+        <h1 class="currentLocation">COSTA ADEJE</h1>
+        <div class="row">
+          <div class="col">
+            <div class="currentLocation__dateTime">
+              Thursday, 01.07.2022
+              <br />
+              00:18
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="weatherNow__moreInfo">
+              <small>
+                <div>Cloudy</div>
+                <div>Wind <strong>2km/h</strong></div>
+                <div>Humidity <strong>25%</strong></div>
+                <div>Air pressure <strong>1020hPa</strong></div>
+              </small>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <span class="weatherNow__temperature">
+              <div class="weatherNow__temperature--degree">
+                <span
+                  class="weatherNow__temperature--degreeNumber"
+                  id="currentTemp"
+                  >22</span
+                ><span
+                  ><a href="#" class="weatherNow__temperatureCelsius--sign"
+                    >°C</a
+                  >
+                  <!--  <a href="#" class="weatherNow__temperatureFahrenheit--sign"
+                    >°F</a
+                  >--></span
+                >
+              </div></span
+            >
+          </div>
+          <div class="col">
+            <div class="weatherNow__icon">☁</div>
+          </div>
+        </div>
+
+        <div class="weatherNextDays">
+          <div class="row">
+            <div class="col weatherNextDays__divider">
+              <div class="weatherNextDays__weekDay">Friday</div>
+              <div class="weatherNextDays__icons">☁</div>
+              <div class="weatherNextDays__temperatures">23°C</div>
+            </div>
+            <div class="col weatherNextDays__divider">
+              <div class="weatherNextDays__weekDay">Saturday</div>
+              <div class="weatherNextDays__icons">🌦</div>
+              <div class="weatherNextDays__temperatures">23°C</div>
+            </div>
+            <div class="col weatherNextDays__divider">
+              <div class="weatherNextDays__weekDay">Sunday</div>
+              <div class="weatherNextDays__icons">🌤</div>
+              <div class="weatherNextDays__temperatures">26°C</div>
+            </div>
+            <div class="col weatherNextDays__divider">
+              <div class="weatherNextDays__weekDay">Monday</div>
+              <div class="weatherNextDays__icons">☀</div>
+              <div class="weatherNextDays__temperatures">28°C</div>
+            </div>
+            <div class="col">
+              <div class="weatherNextDays__weekDay">Tuesday</div>
+              <div class="weatherNextDays__icons">☀</div>
+              <div class="weatherNextDays__temperatures">28°C</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="src/script.js"></script>
+  </body>
+</html>
